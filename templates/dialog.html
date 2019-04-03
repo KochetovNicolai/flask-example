@@ -1,0 +1,15 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>Glory to the Empire!</title>
+    {% endif %}
+  </head>
+  <body>
+    <h1>Hi, {{user.nickname}}!</h1>
+    {% for replica in replicas %}
+    <p>{{replica.author.nickname}} says: <b>{{replica.body}}</b></p>
+    {% endfor %}
+  </body>
+</html>
